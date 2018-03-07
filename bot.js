@@ -1,21 +1,21 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const robot = new Discord.Client();
 
-client.on('ready', () => {
+robot.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
+robot.on('message', message => {
     if (message.content === 'ping') {
     	message.channel.send('PONG!');
   	}
 });
 
-client.on('message', message => {
+robot.on('message', message => {
     if (message.content === 'bing') {
     	message.reply('BONG!');
   	}
 });
 
 // THIS  MUST  BE  THIS  WAY
-client.login(process.env.token);
+robot.login(process.env.token);
